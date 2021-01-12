@@ -5,6 +5,7 @@ import App from './App';
 import router from './router';
 import Element from 'element-ui'
 import axios from 'axios'
+import 'element-ui/lib/theme-chalk/index.css';
 let echarts = require('echarts')
 
 Vue.config.productionTip = false;
