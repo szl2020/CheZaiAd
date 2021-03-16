@@ -2,34 +2,37 @@
   <div>
     <el-container>
       <el-container>
-        <el-aside width="200px">
+        <el-aside width="210px">
         <div class="aside-header">
         <i class="el-icon-s-home"></i>
         <span>主页</span>
         </div>
           <el-menu
-            default-active="1-1"
+          style="width:100%"
+            :default-active="active"
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
             background-color="#545c64"
             text-color="#fff"
             active-text-color="#ffd04b"
+            :router="true"
+            :collapse-transition="true"
           >
             <el-submenu index="1">
               <template slot="title" style="padding-left:0">
                 <i class="el-icon-s-cooperation"></i>
                 <span>工作台</span>
               </template>
-              <router-link to="/exanine">
-               <el-menu-item>
+               <el-menu-item index="/exanine">
                 <template slot="title" >审核管理</template>
-              </el-menu-item></router-link>
-             
-              <el-menu-item>
+              </el-menu-item>
+            
+              <el-menu-item index="/appealmanagement">
                 <template slot="title">申诉管理</template>
               </el-menu-item>
-              <el-menu-item>
+              
+              <el-menu-item index="">
                 <template slot="title">广告签约管理</template>
               </el-menu-item>
               <el-menu-item>
@@ -78,7 +81,12 @@
 export default {
   name: "layout",
   data() {
-    return {};
+    return {
+      active:''
+    };
+  },
+  mounted(){
+    this.active = this.$route.path
   },
   methods: {
     handleOpen(key, keyPath) {
@@ -101,7 +109,7 @@ export default {
   background-color: #545c64;
   color: #333;
   text-align: left;
-  height: 800px;
+  height: 800vh;
 }
 .aside-header{
 height:40px;

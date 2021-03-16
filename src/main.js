@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2021-03-15 16:40:05
+ * @LastEditTime: 2021-03-16 16:37:18
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \CheZaiAd\src\main.js
+ */
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
